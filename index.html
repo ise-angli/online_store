@@ -1,553 +1,722 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIME QH - Professional Watch Services</title>
-    <style>
-        /* 全局样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+<!-- saved from url=(0022)http://www.timeqh.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Beijing Time Q&H Technology Co., Ltd.</title>
+<meta name="keywords" content="Beijing Time Q&H Technology Co., Ltd.">
+<meta name="description" content="Beijing Time Q&H Technology Co., Ltd.">
+<link href="./北京时代勤和科技有限公司_files/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./北京时代勤和科技有限公司_files/swiper.min.css">
+<link rel="stylesheet" href="./北京时代勤和科技有限公司_files/css.css">
+<script src="./北京时代勤和科技有限公司_files/jquery.min.js"></script>
+<!--Dropdown Menu-->
+<script src="./北京时代勤和科技有限公司_files/jquery.SuperSlide.2.1.1.js"></script>
+<!-- HTML5 Shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+ <![endif]-->
+<!--<script>
+    $(window).scroll(function () {
+        // When scrolled to 100px above the bottom, load new content
+        if ($(this).scrollTop() >= 1) {
+            $(".header_nav").css("position", "fixed");
+            $(".header_nav ").css("top", "0");
+        } else {
+            $(".header_nav").css("position", "relative"); // Or maybe absolute, etc., whatever your original value was
+            $(".header_nav ").css("top", "0");
         }
-        
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* 导航栏样式 */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 25px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #3498db;
-        }
-        
-        /* 英雄区域样式 */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80') no-repeat center center/cover;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: #3498db;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #2980b9;
-        }
-        
-        /* 服务区域样式 */
-        .services {
-            padding: 80px 0;
-            background-color: #fff;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 15px;
-        }
-        
-        .section-title p {
-            color: #777;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-            color: #3498db;
-        }
-        
-        .service-title {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-        
-        /* 关于我们区域 */
-        .about {
-            padding: 80px 0;
-            background-color: #f8f9fa;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .about-text h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            color: #555;
-        }
-        
-        .about-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        /* 品牌区域 */
-        .brands {
-            padding: 80px 0;
-            background-color: #fff;
-        }
-        
-        .brand-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 30px;
-            align-items: center;
-        }
-        
-        .brand-item {
-            text-align: center;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-        
-        .brand-item:hover {
-            transform: scale(1.05);
-        }
-        
-        .brand-item img {
-            max-width: 100%;
-            height: auto;
-            filter: grayscale(100%);
-            transition: filter 0.3s;
-        }
-        
-        .brand-item:hover img {
-            filter: grayscale(0%);
-        }
-        
-        /* 联系区域 */
-        .contact {
-            padding: 80px 0;
-            background-color: #2c3e50;
-            color: white;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .contact-info h3 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #3498db;
-        }
-        
-        .contact-info p {
-            margin-bottom: 10px;
-        }
-        
-        /* 页脚样式 */
-        footer {
-            background-color: #1a2530;
-            color: white;
-            padding: 50px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-column h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background-color: #3498db;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: #bdc3c7;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #bdc3c7;
-            font-size: 14px;
-        }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-            }
-            
-            .nav-links {
-                margin-top: 15px;
-            }
-            
-            .nav-links li {
-                margin: 0 10px;
-            }
-            
-            .hero h1 {
-                font-size: 36px;
-            }
-            
-            .hero p {
-                font-size: 18px;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    })
+</script>-->
+<link rel="stylesheet" type="text/css" href="./北京时代勤和科技有限公司_files/page.css">
 </head>
-<body>
-    <!-- 导航栏 -->
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">TIME QH</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#brands">Brands</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- 英雄区域 -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Professional Watch Services</h1>
-                <p>Expert maintenance, repair and restoration for luxury timepieces</p>
-                <a href="#contact" class="btn">Contact Us</a>
-            </div>
+<body style="">
+<header class="clearfix">
+    <div class="hedaer_top clearfix visible-lg visible-md">
+        <div class="wrap">
+            Welcome to Beijing Time Q&H Technology Co., Ltd.!
+            <div class="hedaer_R">
+            <script type="text/javascript">
+// Set as Homepage
+function SetHome(obj,vrl){
+    try{
+        obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl);
+    }
+    catch(e){
+        if(window.netscape) {
+            try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            }
+            catch (e) {
+                alert("This operation was rejected by the browser!\nPlease enter 'about:config' in the browser address bar and press Enter\nThen set the value of [signed.applets.codebase_principal_support] to 'true', double-click to confirm.");
+            }
+            var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+            prefs.setCharPref('browser.startup.homepage',vrl);
+        }else{
+            alert("Your browser does not support this. Please follow these steps: 1. Open browser settings. 2. Click Set Homepage. 3. Enter: "+vrl+" and click OK.");
+        }
+    }
+}
+// Add to Favorites Compatible with 360 and IE6
+function shoucang(sTitle,sURL)
+{
+    try
+    {
+        window.external.addFavorite(sURL, sTitle);
+    }
+    catch (e)
+    {
+        try
+        {
+            window.sidebar.addPanel(sTitle, sURL, "");
+        }
+        catch (e)
+        {
+            alert("Failed to add to favorites, please use Ctrl+D to add");
+        }
+    }
+}
+</script>
+                <a href="http://www.timeqh.com/index.php" style="background:url(images/top2.png) no-repeat left center">Home</a>  |  <a href="http://www.timeqh.com/about.php" style="background:url(images/top1.png) no-repeat left center">About Us</a>
+                  |   <a href="http://www.timeqh.com/lxwm.php" style="background:url(images/top3.png) no-repeat left center">Contact Us</a></div>
         </div>
-    </section>
-
-    <!-- 服务区域 -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Services</h2>
-                <p>锅包肉锅包肉～～～</p>
+    </div>
+    <div class="header clearfix">
+        <div class="wrap">
+            <div class="logo">
+                <a href="http://www.timeqh.com/index.php"><img class="" src="./北京时代勤和科技有限公司_files/logo.png"></a>
+                <span class="icon-menu hidden-md hidden-lg"></span>
             </div>
-            <div class="service-grid">
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3 class="service-title">Watch Repair</h3>
-                    <p>Professional repair services for mechanical, automatic and quartz watches of all brands.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3 class="service-title">Maintenance & Cleaning</h3>
-                    <p>Complete maintenance including disassembly, cleaning, lubrication and reassembly.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💧</div>
-                    <h3 class="service-title">Water Resistance</h3>
-                    <p>Water resistance testing and restoration to ensure your watch is protected.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⏱️</div>
-                    <h3 class="service-title">Movement Service</h3>
-                    <p>Comprehensive movement servicing to restore accuracy and performance.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3 class="service-title">Authentication</h3>
-                    <p>Professional authentication services to verify the authenticity of luxury timepieces.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💎</div>
-                    <h3 class="service-title">Parts Replacement</h3>
-                    <p>Genuine and high-quality replacement parts for various watch models.</p>
-                </div>
+            <div class="tel visible-lg visible-md">
+                <div>National Service Hotline: <!--<span>Support Hotline</span>--><b>010-82475903-018</b></div>
             </div>
-        </div>
-    </section>
-
-    <!-- 关于我们区域 -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About TIME QH</h2>
-                    <p>TIME QH is a professional watch service center dedicated to providing high-quality maintenance and repair services for luxury timepieces. With years of experience and technical expertise, we have earned the trust of watch enthusiasts and collectors.</p>
-                    <p>Our team of skilled watchmakers uses state-of-the-art equipment and genuine parts to ensure your watch receives the care it deserves. We understand the sentimental and financial value of your timepiece and treat each watch with the utmost care and precision.</p>
-                    <p>Whether you need routine maintenance, complex repairs, or restoration services, TIME QH is committed to delivering exceptional results that exceed your expectations.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Watch Service">
-                </div>
+            <div class="ss visible-lg">
+            <form action="http://www.timeqh.com/cpzs.php" method="get">
+                <button class="ss_but" type="submit"></button>
+                <input class="ss_txt" placeholder="Please enter your search content" type="text" name="key">
+                </form>
             </div>
         </div>
-    </section>
-
-    <!-- 品牌区域 -->
-    <section class="brands" id="brands">
-        <div class="container">
-            <div class="section-title">
-                <h2>Brands We Service</h2>
-                <p>We work with a wide range of watch brands from luxury to contemporary</p>
+    </div>
+    <div class="header_nav visible-lg visible-md">
+        <div class="wrap">
+            <!--Dropdown Navigation Start-->
+            <ul id="nav" class="nav clearfix">
+            <li class="nLi on"><h3><a href="http://www.timeqh.com/index.php" class="cur">Home</a></h3></li>
+            <li class="nLi"><h3><a href="http://www.timeqh.com/about.php">About Us</a></h3></li>
+            <li class="nLi"><h3><a href="http://www.timeqh.com/product.php">Products</a></h3>
+				<ul class="sub">
+					<li><a href="http://www.timeqh.com/product.php?classID=1">IN-situ Welding On/Offline Surfacing Equipment</a></li>
+					<li><a href="http://www.timeqh.com/product.php?classID=2">IN-arc Welding Automatic Carbon Arc Gouging</a></li>
+					<li><a href="http://www.timeqh.com/product.php?classID=3">OFF-line Welding Offline Surfacing Equipment</a></li>
+					<li><a href="http://www.timeqh.com/product.php?classID=4">WEAR-plate Welding Wear Plate Surfacing Equipment</a></li>
+					<li><a href="http://www.timeqh.com/product.php?classID=5">Welding Source Welding Equipment & Power Sources</a></li>
+				</ul>
+			</li>
+            <li class="nLi"><h3><a href="http://www.timeqh.com/application.php">Industry Applications</a></h3>
+				<ul class="sub">
+					<li><a href="http://www.timeqh.com/application.php?classID=1">Industry Applications</a></li>
+				</ul>
+			</li>
+			<li class="nLi"><h3><a href="http://www.timeqh.com/case.php">Success Cases</a></h3>
+				<ul class="sub">
+					<li><a href="http://www.timeqh.com/case.php?classID=1">Success Cases</a></li>
+				</ul>
+			</li>
+			<li class="nLi"><h3><a href="http://www.timeqh.com/video.php">Video Showcase</a></h3>
+				<ul class="sub">
+					<li><a href="http://www.timeqh.com/video.php?classID=1">Video Showcase</a></li>
+				</ul>
+			</li>
+			<li class="nLi"><h3><a href="http://www.timeqh.com/news.php">News & Information</a></h3>
+				<ul class="sub">
+					<li><a href="http://www.timeqh.com/news.php?classID=1">Company News</a></li>
+					<li><a href="http://www.timeqh.com/news.php?classID=2">Industry News</a></li>
+				</ul>
+			</li>
+			<li class="nLi"><h3><a href="http://www.timeqh.com/contact.php">Contact Us</a></h3></li>
+			</ul>
+            <script id="jsID" type="text/javascript">
+                jQuery("#nav").slide({
+                    type: "menu",// Effect type, parameter introduced for menus/navigation (default slide)
+                    titCell: ".nLi", //Mouse trigger object
+                    targetCell: ".sub", //Object to show/hide contained within titCell
+                    effect: "slideDown", //targetCell dropdown effect
+                    delayTime: 300, //Effect time
+                    triggerTime: 0, //Mouse delay trigger time (default 150)
+                    returnDefault: true //Return to default state after mouse moves away, e.g., default channel is "Trailers", will return to "Trailers" after mouse leaves (default false)
+                });
+            </script>
+            <script type="text/javascript">
+                var urlstr = location.href;
+                //alert(urlstr);  
+                var urlstatus = false;
+                $(".nLi a").each(function () {
+                    if ((urlstr + '/').indexOf($(this).attr('href')) > -1 && $(this).attr('href') != '') {
+                        $(this).addClass('cur'); urlstatus = true;
+                    } else {
+                        $(this).removeClass('cur');
+                    }
+                });
+                if (!urlstatus) { $(".nLi a").eq(0).addClass('cur'); }
+             </script> 
+            <!--Dropdown Navigation End-->
+        </div>
+    </div>
+     <!--Mobile Navigation-->
+        <div class="sjdnav sjdnavhide hidden-lg hidden-md">
+        
+            <ul class="list-inline">    
+                <li><a href="http://www.timeqh.com/index.php">Home</a></li>
+                <li><a href="http://www.timeqh.com/about.php">About Us</a></li>
+                <li><a href="http://www.timeqh.com/product.php">Products</a></li>
+                <li><a href="http://www.timeqh.com/application.php">Industry Applications</a></li>
+                <li><a href="http://www.timeqh.com/case.php">Success Cases</a></li>
+                 <li><a href="http://www.timeqh.com/video.php">Video Showcase</a></li>
+                <li><a href="http://www.timeqh.com/news.php">News & Information</a></li>
+                <li><a href="http://www.timeqh.com/contact.php">Contact Us</a></li>
+            </ul>
+        </div>
+         <!--Banner Slider Start--> 
+        <div class="banner clearfix">
+        <div class="swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-7168px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 1792px;">
+                    <div class="ban_img visible-lg visible-md" style="background:url(./images/banner3.jpg) 50% 50% no-repeat; background-size:cover;"></div>
+                    <div class="ban_img hidden-lg hidden-md" style="background:url(./images/sj3.jpg) 50% 50% no-repeat; background-size:cover;"></div>
+                </div>
+                <div class="swiper-slide" data-swiper-slide-index="0" style="width: 1792px;">
+                    <div class="ban_img visible-lg visible-md" style="background:url(./images/banner1.jpg) 50% 50% no-repeat; background-size:cover;"></div>
+                    <div class="ban_img hidden-lg hidden-md" style="background:url(./images/sj1.jpg) 50% 50% no-repeat; background-size:cover;"></div>
+                </div>
+                <div class="swiper-slide" data-swiper-slide-index="1" style="width: 1792px;">
+                    <div class="ban_img visible-lg visible-md" style="background:url(./images/banner2.jpg) 50% 50% no-repeat; background-size:cover;"></div>
+                    <div class="ban_img hidden-lg hidden-md" style="background:url(./images/sj2.jpg) 50% 50% no-repeat; background-size:cover;"></div>
+                </div>
+                <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" style="width: 1792px;">
+                    <div class="ban_img visible-lg visible-md" style="background:url(./images/banner3.jpg) 50% 50% no-repeat; background-size:cover;"></div>
+                    <div class="ban_img hidden-lg hidden-md" style="background:url(./images/sj3.jpg) 50% 50% no-repeat; background-size:cover;"></div>
+                </div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 1792px;">
+                    <div class="ban_img visible-lg visible-md" style="background:url(./images/banner1.jpg) 50% 50% no-repeat; background-size:cover;"></div>
+                    <div class="ban_img hidden-lg hidden-md" style="background:url(./images/sj1.jpg) 50% 50% no-repeat; background-size:cover;"></div>
+                </div></div>
+            <!--<div class="swiper-pagination"></div>-->
+        </div>
+    </div>  
+</header>
+<main class="clearfix">
+    <div class="sbsb clearfix">
+        <div class="wrap">
+            <div class="title">
+                <div class="title1">Product Categories</div>
+                <div class="title2"></div>
             </div>
-            <div class="brand-grid">
-                <div class="brand-item">
-                    <div class="brand-name">Rolex</div>
+           <div class="cp_main">
+                <div class="swiper-container1 swiper-container-horizontal">
+                    <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1860px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=2">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134445_99508.jpg" alt="IN-arc welding自动碳弧气刨">
+                                </div>
+                                <div class="zi tr">IN-arc Welding Automatic Carbon Arc Gouging</div>
+                            </a>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=3">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134742_32467.jpg" alt="OFF-line welding离线堆焊设备">
+                                </div>
+                                <div class="zi tr">OFF-line Welding Offline Surfacing Equipment</div>
+                            </a>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=4">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601135110_64643.jpg" alt="WEAR -plate welding耐磨板堆焊设备">
+                                </div>
+                                <div class="zi tr">WEAR-plate Welding Wear Plate Surfacing Equipment</div>
+                            </a>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=5">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601135450_18824.jpg" alt="Welding source焊接设备及电源">
+                                </div>
+                                <div class="zi tr">Welding Source Welding Equipment & Power Sources</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide" data-swiper-slide-index="0" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=1">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134016_81674.jpg" alt="IN-situ welding在、离线堆焊设备">
+                                </div>
+                                <div class="zi tr">IN-situ Welding On/Offline Surfacing Equipment</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=2">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134445_99508.jpg" alt="IN-arc welding自动碳弧气刨">
+                                </div>
+                                <div class="zi tr">IN-arc Welding Automatic Carbon Arc Gouging</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=3">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134742_32467.jpg" alt="OFF-line welding离线堆焊设备">
+                                </div>
+                                <div class="zi tr">OFF-line Welding Offline Surfacing Equipment</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="3" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=4">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601135110_64643.jpg" alt="WEAR -plate welding耐磨板堆焊设备">
+                                </div>
+                                <div class="zi tr">WEAR-plate Welding Wear Plate Surfacing Equipment</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide" data-swiper-slide-index="4" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=5">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601135450_18824.jpg" alt="Welding source焊接设备及电源">
+                                </div>
+                                <div class="zi tr">Welding Source Welding Equipment & Power Sources</div>
+                            </a>
+                        </div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=1">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134016_81674.jpg" alt="IN-situ welding在、离线堆焊设备">
+                                </div>
+                                <div class="zi tr">IN-situ Welding On/Offline Surfacing Equipment</div>
+                            </a>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=2">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134445_99508.jpg" alt="IN-arc welding自动碳弧气刨">
+                                </div>
+                                <div class="zi tr">IN-arc Welding Automatic Carbon Arc Gouging</div>
+                            </a>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=3">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134742_32467.jpg" alt="OFF-line welding离线堆焊设备">
+                                </div>
+                                <div class="zi tr">OFF-line Welding Offline Surfacing Equipment</div>
+                            </a>
+                        </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 270px; margin-right: 40px;">
+                            <a href="http://www.timeqh.com/product.php?classID=4">
+                                <div class="pic">
+                                    <div class="cp_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601135110_64643.jpg" alt="WEAR -plate welding耐磨板堆焊设备">
+                                </div>
+                                <div class="zi tr">WEAR-plate Welding Wear Plate Surfacing Equipment</div>
+                            </a>
+                        </div></div>
                 </div>
-                <div class="brand-item">
-                    <div class="brand-name">Omega</div>
+                <div class="sb_more"><a href="http://www.timeqh.com/product.php" class=" tr">Learn More</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="guanggao clearfix">
+        <div class="wrap">
+            <img src="./北京时代勤和科技有限公司_files/guanggao.jpg">
+        </div>
+    </div>
+    <div class="about clearfix">
+        <div class="wrap">
+            <div class="title">
+                <div class="title1" style="background:url(images/title2.png) no-repeat center center;color:#fff;">About Us</div>
+                <div class="title2" style="color:#fff;">Beijing Time Q&H Technology Co., Ltd.</div>
+            </div>
+            <div class="about_main">
+                <div class="about_img"><img src="./北京时代勤和科技有限公司_files/about_img.jpg"></div>
+                <div class="zi"><p style="text-indent: 2em;">Beijing Time Q&H Technology Co., Ltd. adheres to the principle of quality first and service-oriented, actively explores domestic and international markets, focuses on the development of welding power sources, automated welding, and surfacing technology, and continuously introduces new high-tech products to the market, such as online/offline open arc surfacing equipment, digital welding power sources, wear plate surfacing equipment, pipeline inner wall surfacing equipment, various surfacing special machines, and flux-cored wires.</p><p style="text-indent: 2em;">Time Q&H Technology consistently proves through successful cases that providing customers with superior quality, top-tier service, and durable, low-maintenance products will be your choice.</p><p style="text-indent: 2em;">Time Q&H Technology always insists on being user-demand oriented, committed to developing high-performance welding power sources and surfacing equipment products, keeping an eye on industry frontiers, constantly challenging ourselves, and keeping pace with the times.</p><p style="text-indent: 2em;">Time Q&H Technology's sales cover major cities and regions in China, and we have provided many qualified welding equipment to dozens of enterprises including power plants, cement plants, and steel mills.</p><p style="text-indent: 2em;">While expanding the domestic market, Time Q&H Technology is also actively exploring international markets. Currently, our online and offline surfacing equipment has been exported in bulk to foreign markets such as the United States, Canada, Malaysia, Bangladesh, Egypt, Russia, and the European Union!</p></div>
+            </div>
+        </div>
+    </div>
+  
+   
+    <div class="case clearfix">
+        <div class="wrap">
+            <div class="title">
+                <div class="title1">Industry Applications</div>
+                <div class="title2"></div>
+            </div>
+            <div class="case_main">
+                <div class="swiper-container3 swiper-container-horizontal swiper-container-multirow">
+                    <div class="swiper-wrapper" style="width: 1220px;">
+                       <div class="swiper-slide swiper-slide-active" data-swiper-column="0" data-swiper-row="0" style="order: 0; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/application_show.php?classID=1&amp;id=1">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601133351_67919.jpg" alt="Industry Applications">
+                                </div>
+                                <div class="zi tr">Industry Applications</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide swiper-slide-next" data-swiper-column="0" data-swiper-row="1" style="-webkit-box-ordinal-group: 4; order: 4; margin-top: 20px; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/application_show.php?classID=1&amp;id=2">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601133351_12178.jpg" alt="Industry Applications">
+                                </div>
+                                <div class="zi tr">Industry Applications</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide" data-swiper-column="1" data-swiper-row="0" style="-webkit-box-ordinal-group: 1; order: 1; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/application_show.php?classID=1&amp;id=3">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601133351_32406.jpg" alt="Industry Applications">
+                                </div>
+                                <div class="zi tr">Industry Applications</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide" data-swiper-column="1" data-swiper-row="1" style="-webkit-box-ordinal-group: 5; order: 5; margin-top: 20px; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/application_show.php?classID=1&amp;id=4">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601133351_32887.jpg" alt="Industry Applications">
+                                </div>
+                                <div class="zi tr">Industry Applications</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide" data-swiper-column="2" data-swiper-row="0" style="-webkit-box-ordinal-group: 2; order: 2; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/application_show.php?classID=1&amp;id=5">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601133351_89752.jpg" alt="Industry Applications">
+                                </div>
+                                <div class="zi tr">Industry Applications</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide" data-swiper-column="2" data-swiper-row="1" style="-webkit-box-ordinal-group: 6; order: 6; margin-top: 20px; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/application_show.php?classID=1&amp;id=6">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601133351_44898.jpg" alt="Industry Applications">
+                                </div>
+                                <div class="zi tr">Industry Applications</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide" data-swiper-column="3" data-swiper-row="0" style="-webkit-box-ordinal-group: 3; order: 3; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/application_show.php?classID=1&amp;id=7">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601133351_11587.jpg" alt="Industry Applications">
+                                </div>
+                                <div class="zi tr">Industry Applications</div>
+                            </a>
+                        </div>
+                       <div class="swiper-slide" data-swiper-column="3" data-swiper-row="1" style="-webkit-box-ordinal-group: 7; order: 7; margin-top: 20px; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/application_show.php?classID=1&amp;id=8">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601133351_42483.jpg" alt="Industry Applications">
+                                </div>
+                                <div class="zi tr">Industry Applications</div>
+                            </a>
+                        </div>
+                        
+                    </div>
                 </div>
-                <div class="brand-item">
-                    <div class="brand-name">Cartier</div>
+                <div class="sb_more"><a href="http://www.timeqh.com/application.php" class=" tr">Learn More</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="lc clearfix">
+        <div class="wrap">
+            <div class="lc_t overflow">Beijing Time Q&H Technology Co., Ltd.</div>
+            <div class="lc_p overflow"></div>
+            <ul class="lc_ul clearfix">
+                <li>
+                    <a href="http://www.timeqh.com/#">
+                        <div class="lc_top lc_back1 tr">
+                            <div class="lc_01">01</div>
+                            <div class="lc_le">
+                                <div class="lc_le_1">Main Business<span></span></div>
+                            </div>
+                        </div>
+                        <img src="./北京时代勤和科技有限公司_files/lc_img.jpg">
+                        <h6>Focus on the development of welding power sources, automated welding, and surfacing technology, continuously introducing new technological products to the market.</h6>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.timeqh.com/#">
+                        <div class="lc_top lc_back2 tr">
+                            <div class="lc_01">02</div>
+                            <div class="lc_le">
+                                <div class="lc_le_1">Collaborate Together, Innovate and Win-Win<span></span></div>
+                            </div>
+                        </div>
+                        <img src="./北京时代勤和科技有限公司_files/lc_img.jpg">
+                        <h6>Adhering to the corporate philosophy of "Collaborate Together, Create Win-Win"
+                </h6></a></li><a href="http://www.timeqh.com/#">
+                </a><li><a href="http://www.timeqh.com/#">
+                    </a><a href="http://www.timeqh.com/#">
+                        <div class="lc_top lc_back3 tr">
+                            <div class="lc_01">03</div>
+                            <div class="lc_le">
+                                <div class="lc_le_1">Committed to "Harmony" Culture Construction<span></span></div>
+                            </div>
+                        </div>
+                        <img src="./北京时代勤和科技有限公司_files/lc_img.jpg">
+                        <h6>Committed to building a "Harmony" culture, providing customers with superior quality and service.</h6>
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="http://www.timeqh.com/#">
+                        <div class="lc_top lc_back4 tr">
+                            <div class="lc_01">04</div>
+                            <div class="lc_le">
+                                <div class="lc_le_1">Building Market Competitiveness<span></span></div>
+                            </div>
+                        </div>
+                        <img src="./北京时代勤和科技有限公司_files/lc_img.jpg">
+                        <h6>Striving to build an enterprise with strong market competitiveness</h6>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sbsb clearfix">
+        <div class="wrap">
+            <div class="title">
+                <div class="title1">Product Center</div>
+                <div class="title2"></div>
+            </div>
+            <div class="sbsb_main">
+                <div class="swiper-container2 swiper-container-horizontal swiper-container-multirow">
+                    <div class="swiper-wrapper" style="width: 1220px;">
+                        <div class="swiper-slide swiper-slide-active" data-swiper-column="0" data-swiper-row="0" style="order: 0; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/product_show.php?classID=1&amp;id=2">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134102_81540.jpg" alt="IN-situ welding在、离线堆焊设备">
+                                </div>
+                                <div class="zi tr">IN-situ Welding On/Offline Surfacing Equipment</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide swiper-slide-next" data-swiper-column="0" data-swiper-row="1" style="-webkit-box-ordinal-group: 4; order: 4; margin-top: 20px; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/product_show.php?classID=1&amp;id=3">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134102_81674.jpg" alt="IN-situ welding在、离线堆焊设备">
+                                </div>
+                                <div class="zi tr">IN-situ Welding On/Offline Surfacing Equipment</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-swiper-column="1" data-swiper-row="0" style="-webkit-box-ordinal-group: 1; order: 1; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/product_show.php?classID=2&amp;id=4">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134507_99508.jpg" alt="IN-arc welding自动碳弧气刨">
+                                </div>
+                                <div class="zi tr">IN-arc Welding Automatic Carbon Arc Gouging</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-swiper-column="1" data-swiper-row="1" style="-webkit-box-ordinal-group: 5; order: 5; margin-top: 20px; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/product_show.php?classID=2&amp;id=5">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134507_32467.jpg" alt="IN-arc welding自动碳弧气刨">
+                                </div>
+                                <div class="zi tr">IN-arc Welding Automatic Carbon Arc Gouging</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-swiper-column="2" data-swiper-row="0" style="-webkit-box-ordinal-group: 2; order: 2; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/product_show.php?classID=3&amp;id=6">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134823_32467.jpg" alt="OFF-line welding离线堆焊设备">
+                                </div>
+                                <div class="zi tr">OFF-line Welding Offline Surfacing Equipment</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-swiper-column="2" data-swiper-row="1" style="-webkit-box-ordinal-group: 6; order: 6; margin-top: 20px; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/product_show.php?classID=3&amp;id=7">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601134823_64643.jpg" alt="OFF-line welding离线堆焊设备">
+                                </div>
+                                <div class="zi tr">OFF-line Welding Offline Surfacing Equipment</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-swiper-column="3" data-swiper-row="0" style="-webkit-box-ordinal-group: 3; order: 3; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/product_show.php?classID=4&amp;id=8">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601135201_64643.jpg" alt="WEAR -plate welding耐磨板堆焊设备">
+                                </div>
+                                <div class="zi tr">WEAR-plate Welding Wear Plate Surfacing Equipment</div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide" data-swiper-column="3" data-swiper-row="1" style="-webkit-box-ordinal-group: 7; order: 7; margin-top: 20px; width: 285px; margin-right: 20px;">
+                            <a href="http://www.timeqh.com/product_show.php?classID=4&amp;id=9">
+                                <div class="pic tr">
+                                    <div class="sb_img"></div>
+                                    <img class="img_cover tr" src="./北京时代勤和科技有限公司_files/20250601135201_18824.jpg" alt="WEAR -plate welding耐磨板堆焊设备">
+                                </div>
+                                <div class="zi tr">WEAR-plate Welding Wear Plate Surfacing Equipment</div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="brand-item">
-                    <div class="brand-name">Patek Philippe</div>
+                <div class="sb_more"><a href="http://www.timeqh.com/product.php" class=" tr">Learn More</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="news clearfix">
+        <div class="wrap">
+            <div class="news_main">
+                <div class="news_left">
+                    <div class="title">
+                        <div class="title1">News & Information</div>
+                        <div class="title2"></div>
+                    </div>
+                    <div class="news_left_main">
+                        <ul class="news_ul">
+                            <li>
+                                <a href="http://www.timeqh.com/news_show.php?classID=1&amp;id=1">
+                                    <div class="news_t">Company News</div>
+                                    <div class="news_zi">Company News</div>
+                                    <div class="news_time">2025-05-29</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.timeqh.com/news_show.php?classID=1&amp;id=2">
+                                    <div class="news_t">Company News</div>
+                                    <div class="news_zi">Company News</div>
+                                    <div class="news_time">2025-05-29</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.timeqh.com/news_show.php?classID=1&amp;id=3">
+                                    <div class="news_t">Company News</div>
+                                    <div class="news_zi">Company News</div>
+                                    <div class="news_time">2025-05-29</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.timeqh.com/news_show.php?classID=1&amp;id=4">
+                                    <div class="news_t">Company News</div>
+                                    <div class="news_zi">Company News</div>
+                                    <div class="news_time">2025-05-29</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.timeqh.com/news_show.php?classID=1&amp;id=5">
+                                    <div class="news_t">Company News</div>
+                                    <div class="news_zi">Company News</div>
+                                    <div class="news_time">2025-05-29</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="brand-item">
-                    <div class="brand-name">Audemars Piguet</div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-name">TAG Heuer</div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-name">Longines</div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-name">Tudor</div>
+                <div class="news_right">
+                    <div class="title">
+                        <div class="title1">Contact Us</div>
+                        <div class="title2"></div>
+                    </div>
+                    <div class="news_right_main">
+                        <div class="news_right_1">
+                            <div class="news_right_1_1">Contact: Manager Wang</div>
+                            <div class="news_right_1_1">Phone: 010-82475903-018</div>
+                            <div class="news_right_1_1">Fax: 010-82475903-018</div>
+                            <div class="news_right_1_1">Email: timeqh@163.com</div>
+                            <div class="news_right_1_1">Address: Room 101, Building 2, No. 6 Shangdi Information Road, Haidian District, Beijing</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- 联系区域 -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Get in touch with our expert watchmakers</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Visit Our Store</h3>
-                    <p>123 Watch Street</p>
-                    <p>Central District, City</p>
-                    <p>China</p>
+    </div>
+</main>
+<footer class="clearfix">
+    <div class="footer clearfix">
+        <div class="wrap">
+            <div class="footer_main">
+                <div class="footer_left">
+                    <div class="footer_logo"><img src="./北京时代勤和科技有限公司_files/footer_logo.png"></div>
+                    <div class="footer_zi">
+                        <p>Beijing Time Q&H Technology Co., Ltd.</p>
+                        <p>Phone: 010-82475903-018</p>
+                        <p>Email: timeqh@163.com</p>
+                        <p>Address: Room 101, Building 2, No. 6 Shangdi Information Road, Haidian District, Beijing</p>
+                    </div>
                 </div>
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p>Phone: +86 123 4567 8900</p>
-                    <p>Email: info@timeqh.com</p>
-                    <p>WeChat: TIME_QH</p>
-                </div>
-                <div class="contact-info">
-                    <h3>Business Hours</h3>
-                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p>Saturday: 10:00 AM - 4:00 PM</p>
-                    <p>Sunday: Closed</p>
+                <div class="footer_right">
+                    <div class="footer_code"><img src="./北京时代勤和科技有限公司_files/code.jpg"></div>
+                    <div class="footer_zi">WeChat Official Account</div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>About TIME QH</h3>
-                    <p>Professional watch services with years of experience in luxury timepiece maintenance and repair.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Our Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Watch Repair</a></li>
-                        <li><a href="#">Maintenance</a></li>
-                        <li><a href="#">Authentication</a></li>
-                        <li><a href="#">Parts Replacement</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Follow Us</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">WeChat</a></li>
-                        <li><a href="#">Weibo</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 TIME QH. All rights reserved.</p>
-            </div>
+    </div>
+    <div class="footer_bottom clearfix">
+        <div class="wrap">
+            Copyright © Beijing Time Q&H Technology Co., Ltd. All Rights Reserved. 
         </div>
-    </footer>
+    </div>
+</footer>
+<script src="./北京时代勤和科技有限公司_files/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        autoplay: 3000,
+        speed: 1000,
+        autoplayDisableOnInteraction: false
+    });
+    var swiper1 = new Swiper('.swiper-container1', {
+        slidesPerView: 4,
+        spaceBetween: 40,
+        loop: true,
+        autoplay: 3000,
+        speed: 1000,
+        autoplayDisableOnInteraction: false
+    });
+    var swiper2 = new Swiper('.swiper-container2', {
+        slidesPerView: 4,
+        slidesPerColumn: 2,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: 3000,
+        speed: 1000,
+        autoplayDisableOnInteraction: false
+    });
+    var swiper3 = new Swiper('.swiper-container3', {
+        slidesPerView: 4,
+        slidesPerColumn: 2,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: 3000,
+        speed: 1000,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+<script>
+    $(".icon-menu").click(function () {
+        $(".sjdnav").toggleClass("sjdnavhide");
+    })
+</script>
 
-    <script>
-        // 平滑滚动
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+
+</body></html>
