@@ -1,0 +1,29 @@
+﻿.diy_page,.diy_page2{font:12px/21px Arial;clear:both;margin:0 auto;text-align:center;color:#999;}
+.diy_page a img{border:0;}
+.diy_page a{text-decoration:none;color:#333;border:1px solid #CCCCCC; padding:0 4px;margin-right:1px;}
+.diy_page a:hover{color:#f00;background:#CCCCCC;text-decoration:none;}
+.diy_page a.current{color:red;border:1px solid #CCCCCC; background:#CCCCCC;}
+.diy_page a.p_n{border:none;}
+.diy_page a.p_n:hover{border:none;background:none;color:#F00;text-decoration:underline;}
+.diy_page a.nob{border:none;padding:0 3px}
+.diy_page a.p_n2{border:none;text-decoration:none;border:1px solid #FFF;}
+.diy_page a.p_n2:hover{border:none;background:none;border:1px solid #FFBB55;}
+
+/*=====================分页样式====================*/
+.pagination{text-align:center; margin:0; padding:0;  font-size:0;}
+.pagination li{font-size:14px;display:inline-block; vertical-align:top; height:25px; width:25px; line-height:25px; margin:0 5px}
+.pagination li.active span{width:25px; height:25px;line-height:25px; display:block; border:1px solid #267CB7; background:#3091D4; color:#fff}
+.pagination li.disabled span{display:inline-block; height:25px; width:25px; line-height:25px; border:1px solid #fff;}
+.pagination li a{display:block; background:#fff; border:1px solid #EFF0F3; width:100%; height:100%; line-height:25px; color:#000;text-decoration:none}
+.pagination li:hover a{display:block; background:#fff; border:1px solid #EFF0F3; width:100%; height:100%; color:#f00;}
+/*=====================分页样式====================*/
+
+/*=====================分页样式====================*/
+.pagination2{text-align:center; margin:0; padding:0;  font-size:0;}
+.pagination2 li{font-size:14px;display:inline-block; vertical-align:top; line-height:30px; margin:0 3px;}
+.pagination2 li span{padding: 0 10px; line-height:25px; display:block; border:1px solid #EFF0F3; border-radius: 5px;}
+.pagination2 li.active span{padding: 0 10px; line-height:25px; display:block; border:1px solid #267CB7; background:#3091D4; color:#fff; border-radius: 5px;}
+.pagination2 li.disabled span{display:inline-block; padding: 0 10px; line-height:25px; border:1px solid #267CB7;}
+.pagination2 li a{display:block; background:#fff; border:1px solid #EFF0F3; width:100%; height:100%; padding: 0 10px; line-height:25px; color:#000;text-decoration:none; border-radius: 5px;}
+.pagination2 li:hover a{display:block; background:#3091D4; border:1px solid #EFF0F3; width:100%; height:100%; color:#fff;}
+/*=====================分页样式====================*/

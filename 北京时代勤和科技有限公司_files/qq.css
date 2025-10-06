@@ -1,0 +1,13 @@
+.qq{position: fixed; top: 30%; right: 5px; z-index: 6;}
+.qq .item{width: 68px; height: 68px; background-color: #0759bf; position: relative; border-radius: 5px; margin-bottom: 2px;}
+.qq .item .icon{width: 100%; height: 100%; position: relative;}
+.qq .item .icon img{position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto; max-width: 100%; max-height: 100%;}
+.qq .item .mask{position: absolute; right: 100%; top: 0; background-color: #fff; padding: 10px; border-radius: 5px; transform: scale(0);}
+.qq .item .QR{text-align: center; overflow: hidden; width: 120px}
+.qq .item .QR img{width: 100px; height: 100px;}
+.qq .item .tel{width: 140px;}
+.qq .item .tel span{font-size: 16px; color: #333; line-height: 25px; display: block;}
+.qq .item .email{width: 140px;}
+.qq .item .email span{font-size: 16px; color: #333; line-height: 25px; display: block;}
+.qq .item:hover {background-color: #e7ad52;}
+.qq .item:hover .mask{transform: scale(1);}
