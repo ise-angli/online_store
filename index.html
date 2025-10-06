@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>沈大玥儿的精品小店</title>
+    <title>TIME QH - Professional Watch Services</title>
     <style>
         /* 全局样式 */
         * {
@@ -45,7 +45,7 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #e74c3c;
+            color: #2c3e50;
         }
         
         .nav-links {
@@ -65,32 +65,12 @@
         }
         
         .nav-links a:hover {
-            color: #e74c3c;
-        }
-        
-        .cart-icon {
-            position: relative;
-            cursor: pointer;
-        }
-        
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background-color: #e74c3c;
-            color: white;
-            border-radius: 50%;
-            width: 18px;
-            height: 18px;
-            font-size: 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: #3498db;
         }
         
         /* 英雄区域样式 */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80') no-repeat center center/cover;
             height: 500px;
             display: flex;
             align-items: center;
@@ -115,7 +95,7 @@
         
         .btn {
             display: inline-block;
-            background-color: #e74c3c;
+            background-color: #3498db;
             color: white;
             padding: 12px 30px;
             border-radius: 5px;
@@ -125,12 +105,13 @@
         }
         
         .btn:hover {
-            background-color: #c0392b;
+            background-color: #2980b9;
         }
         
-        /* 产品区域样式 */
-        .products {
+        /* 服务区域样式 */
+        .services {
             padding: 80px 0;
+            background-color: #fff;
         }
         
         .section-title {
@@ -150,65 +131,130 @@
             margin: 0 auto;
         }
         
-        .product-grid {
+        .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
         }
         
-        .product-card {
-            background-color: white;
+        .service-card {
+            background-color: #f8f9fa;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            padding: 30px;
+            text-align: center;
         }
         
-        .product-card:hover {
+        .service-card:hover {
             transform: translateY(-10px);
         }
         
-        .product-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #3498db;
         }
         
-        .product-info {
-            padding: 20px;
-        }
-        
-        .product-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        
-        .product-price {
-            color: #e74c3c;
-            font-weight: bold;
-            font-size: 20px;
+        .service-title {
+            font-size: 22px;
             margin-bottom: 15px;
+            color: #2c3e50;
         }
         
-        .add-to-cart {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
+        /* 关于我们区域 */
+        .about {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .about-image img {
             width: 100%;
-            font-weight: bold;
-            transition: background-color 0.3s;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .add-to-cart:hover {
-            background-color: #2980b9;
+        /* 品牌区域 */
+        .brands {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .brand-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .brand-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .brand-item img {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+        
+        .brand-item:hover img {
+            filter: grayscale(0%);
+        }
+        
+        /* 联系区域 */
+        .contact {
+            padding: 80px 0;
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
         }
         
         /* 页脚样式 */
         footer {
-            background-color: #2c3e50;
+            background-color: #1a2530;
             color: white;
             padding: 50px 0 20px;
         }
@@ -234,7 +280,7 @@
             bottom: 0;
             width: 50px;
             height: 2px;
-            background-color: #e74c3c;
+            background-color: #3498db;
         }
         
         .footer-links {
@@ -263,146 +309,6 @@
             font-size: 14px;
         }
         
-        /* 购物车侧边栏 */
-        .cart-sidebar {
-            position: fixed;
-            top: 0;
-            right: -400px;
-            width: 380px;
-            height: 100vh;
-            background-color: white;
-            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-            transition: right 0.3s ease;
-            z-index: 1001;
-            padding: 20px;
-            overflow-y: auto;
-        }
-        
-        .cart-sidebar.active {
-            right: 0;
-        }
-        
-        .cart-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .close-cart {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: #777;
-        }
-        
-        .cart-items {
-            margin-bottom: 20px;
-        }
-        
-        .cart-item {
-            display: flex;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .cart-item-img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            margin-right: 15px;
-        }
-        
-        .cart-item-details {
-            flex: 1;
-        }
-        
-        .cart-item-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .cart-item-price {
-            color: #e74c3c;
-        }
-        
-        .cart-item-quantity {
-            display: flex;
-            align-items: center;
-            margin-top: 5px;
-        }
-        
-        .quantity-btn {
-            background-color: #f1f1f1;
-            border: none;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-        
-        .quantity-input {
-            width: 40px;
-            text-align: center;
-            margin: 0 10px;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            padding: 5px;
-        }
-        
-        .remove-item {
-            color: #e74c3c;
-            background: none;
-            border: none;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-        
-        .cart-total {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: right;
-        }
-        
-        .checkout-btn {
-            background-color: #27ae60;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            width: 100%;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .checkout-btn:hover {
-            background-color: #219653;
-        }
-        
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            z-index: 1000;
-            display: none;
-        }
-        
-        .overlay.active {
-            display: block;
-        }
-        
         /* 响应式设计 */
         @media (max-width: 768px) {
             .navbar {
@@ -425,9 +331,8 @@
                 font-size: 18px;
             }
             
-            .cart-sidebar {
-                width: 100%;
-                right: -100%;
+            .about-content {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -437,41 +342,150 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <div class="logo">精品小店</div>
+                <div class="logo">TIME QH</div>
                 <ul class="nav-links">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#products">商品</a></li>
-                    <li><a href="#">关于我们</a></li>
-                    <li><a href="#">联系我们</a></li>
-                    <li class="cart-icon" id="cartIcon">
-                        🛒
-                        <span class="cart-count">0</span>
-                    </li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#brands">Brands</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- 英雄区域 -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>发现精选好物</h1>
-                <p>为您精心挑选的优质商品，品质保证，价格实惠</p>
-                <a href="#products" class="btn">立即购物</a>
+                <h1>Professional Watch Services</h1>
+                <p>Expert maintenance, repair and restoration for luxury timepieces</p>
+                <a href="#contact" class="btn">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <!-- 产品区域 -->
-    <section class="products" id="products">
+    <!-- 服务区域 -->
+    <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>热门商品</h2>
-                <p>精选优质商品，满足您的各种需求</p>
+                <h2>Our Services</h2>
+                <p>Comprehensive watch care from routine maintenance to complex repairs</p>
             </div>
-            <div class="product-grid" id="productGrid">
-                <!-- 产品将通过JavaScript动态加载 -->
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3 class="service-title">Watch Repair</h3>
+                    <p>Professional repair services for mechanical, automatic and quartz watches of all brands.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3 class="service-title">Maintenance & Cleaning</h3>
+                    <p>Complete maintenance including disassembly, cleaning, lubrication and reassembly.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3 class="service-title">Water Resistance</h3>
+                    <p>Water resistance testing and restoration to ensure your watch is protected.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⏱️</div>
+                    <h3 class="service-title">Movement Service</h3>
+                    <p>Comprehensive movement servicing to restore accuracy and performance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3 class="service-title">Authentication</h3>
+                    <p>Professional authentication services to verify the authenticity of luxury timepieces.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💎</div>
+                    <h3 class="service-title">Parts Replacement</h3>
+                    <p>Genuine and high-quality replacement parts for various watch models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们区域 -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About TIME QH</h2>
+                    <p>TIME QH is a professional watch service center dedicated to providing high-quality maintenance and repair services for luxury timepieces. With years of experience and technical expertise, we have earned the trust of watch enthusiasts and collectors.</p>
+                    <p>Our team of skilled watchmakers uses state-of-the-art equipment and genuine parts to ensure your watch receives the care it deserves. We understand the sentimental and financial value of your timepiece and treat each watch with the utmost care and precision.</p>
+                    <p>Whether you need routine maintenance, complex repairs, or restoration services, TIME QH is committed to delivering exceptional results that exceed your expectations.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Watch Service">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌区域 -->
+    <section class="brands" id="brands">
+        <div class="container">
+            <div class="section-title">
+                <h2>Brands We Service</h2>
+                <p>We work with a wide range of watch brands from luxury to contemporary</p>
+            </div>
+            <div class="brand-grid">
+                <div class="brand-item">
+                    <div class="brand-name">Rolex</div>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-name">Omega</div>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-name">Cartier</div>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-name">Patek Philippe</div>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-name">Audemars Piguet</div>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-name">TAG Heuer</div>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-name">Longines</div>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-name">Tudor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系区域 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our expert watchmakers</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Visit Our Store</h3>
+                    <p>123 Watch Street</p>
+                    <p>Central District, City</p>
+                    <p>China</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Phone: +86 123 4567 8900</p>
+                    <p>Email: info@timeqh.com</p>
+                    <p>WeChat: TIME_QH</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
             </div>
         </div>
     </section>
@@ -481,310 +495,59 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>关于我们</h3>
-                    <p>我们致力于为顾客提供高品质的商品和优质的购物体验。</p>
+                    <h3>About TIME QH</h3>
+                    <p>Professional watch services with years of experience in luxury timepiece maintenance and repair.</p>
                 </div>
                 <div class="footer-column">
-                    <h3>快速链接</h3>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#">首页</a></li>
-                        <li><a href="#products">商品</a></li>
-                        <li><a href="#">关于我们</a></li>
-                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>联系我们</h3>
+                    <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li>电话: 123-456-7890</li>
-                        <li>邮箱: info@example.com</li>
-                        <li>地址: 某市某区某街道123号</li>
+                        <li><a href="#">Watch Repair</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                        <li><a href="#">Authentication</a></li>
+                        <li><a href="#">Parts Replacement</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>关注我们</h3>
+                    <h3>Follow Us</h3>
                     <ul class="footer-links">
-                        <li><a href="#">微信</a></li>
-                        <li><a href="#">微博</a></li>
-                        <li><a href="#">抖音</a></li>
+                        <li><a href="#">WeChat</a></li>
+                        <li><a href="#">Weibo</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 精品小店. 保留所有权利.</p>
+                <p>&copy; 2023 TIME QH. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- 购物车侧边栏 -->
-    <div class="cart-sidebar" id="cartSidebar">
-        <div class="cart-header">
-            <h2>购物车</h2>
-            <button class="close-cart" id="closeCart">×</button>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <!-- 购物车商品将通过JavaScript动态加载 -->
-        </div>
-        <div class="cart-total">
-            总计: ¥<span id="cartTotal">0.00</span>
-        </div>
-        <button class="checkout-btn">去结算</button>
-    </div>
-
-    <!-- 遮罩层 -->
-    <div class="overlay" id="overlay"></div>
-
     <script>
-        // 模拟产品数据
-        const products = [
-            {
-                id: 1,
-                name: "锅包又",
-                price: 99.00,
-                image: "https://via.placeholder.com/300x300?text=T恤"
-            },
-            {
-                id: 2,
-                name: "溜又段",
-                price: 199.00,
-                image: "https://via.placeholder.com/300x300?text=牛仔裤"
-            },
-            {
-                id: 3,
-                name: "烂炖",
-                price: 299.00,
-                image: "https://via.placeholder.com/300x300?text=运动鞋"
-            },
-            {
-                id: 4,
-                name: "这家伙",
-                price: 599.00,
-                image: "https://via.placeholder.com/300x300?text=手表"
-            },
-            {
-                id: 5,
-                name: "便携充电宝",
-                price: 129.00,
-                image: "https://via.placeholder.com/300x300?text=充电宝"
-            },
-            {
-                id: 6,
-                name: "无线耳机",
-                price: 399.00,
-                image: "https://via.placeholder.com/300x300?text=耳机"
-            }
-        ];
-
-        // 购物车数据
-        let cart = [];
-
-        // DOM元素
-        const productGrid = document.getElementById('productGrid');
-        const cartIcon = document.getElementById('cartIcon');
-        const cartSidebar = document.getElementById('cartSidebar');
-        const closeCart = document.getElementById('closeCart');
-        const cartItems = document.getElementById('cartItems');
-        const cartTotal = document.getElementById('cartTotal');
-        const cartCount = document.querySelector('.cart-count');
-        const overlay = document.getElementById('overlay');
-
-        // 初始化页面
-        document.addEventListener('DOMContentLoaded', () => {
-            renderProducts();
-            updateCart();
-            
-            // 事件监听
-            cartIcon.addEventListener('click', toggleCart);
-            closeCart.addEventListener('click', toggleCart);
-            overlay.addEventListener('click', toggleCart);
-        });
-
-        // 渲染产品列表
-        function renderProducts() {
-            productGrid.innerHTML = '';
-            products.forEach(product => {
-                const productCard = document.createElement('div');
-                productCard.className = 'product-card';
-                productCard.innerHTML = `
-                    <img src="${product.image}" alt="${product.name}" class="product-img">
-                    <div class="product-info">
-                        <h3 class="product-title">${product.name}</h3>
-                        <div class="product-price">¥${product.price.toFixed(2)}</div>
-                        <button class="add-to-cart" data-id="${product.id}">加入购物车</button>
-                    </div>
-                `;
-                productGrid.appendChild(productCard);
-            });
-
-            // 添加购物车按钮事件
-            document.querySelectorAll('.add-to-cart').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const productId = parseInt(e.target.getAttribute('data-id'));
-                    addToCart(productId);
-                });
-            });
-        }
-
-        // 添加到购物车
-        function addToCart(productId) {
-            const product = products.find(p => p.id === productId);
-            const existingItem = cart.find(item => item.id === productId);
-            
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({
-                    id: product.id,
-                    name: product.name,
-                    price: product.price,
-                    image: product.image,
-                    quantity: 1
-                });
-            }
-            
-            updateCart();
-            showNotification(`${product.name} 已添加到购物车`);
-        }
-
-        // 更新购物车
-        function updateCart() {
-            // 更新购物车数量
-            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-            cartCount.textContent = totalItems;
-            
-            // 更新购物车侧边栏
-            cartItems.innerHTML = '';
-            let totalPrice = 0;
-            
-            cart.forEach(item => {
-                const itemTotal = item.price * item.quantity;
-                totalPrice += itemTotal;
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
                 
-                const cartItem = document.createElement('div');
-                cartItem.className = 'cart-item';
-                cartItem.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
-                    <div class="cart-item-details">
-                        <div class="cart-item-title">${item.name}</div>
-                        <div class="cart-item-price">¥${item.price.toFixed(2)}</div>
-                        <div class="cart-item-quantity">
-                            <button class="quantity-btn minus" data-id="${item.id}">-</button>
-                            <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-id="${item.id}">
-                            <button class="quantity-btn plus" data-id="${item.id}">+</button>
-                        </div>
-                        <button class="remove-item" data-id="${item.id}">删除</button>
-                    </div>
-                `;
-                cartItems.appendChild(cartItem);
-            });
-            
-            cartTotal.textContent = totalPrice.toFixed(2);
-            
-            // 添加购物车项目事件
-            document.querySelectorAll('.quantity-btn.minus').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const id = parseInt(e.target.getAttribute('data-id'));
-                    updateQuantity(id, -1);
-                });
-            });
-            
-            document.querySelectorAll('.quantity-btn.plus').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const id = parseInt(e.target.getAttribute('data-id'));
-                    updateQuantity(id, 1);
-                });
-            });
-            
-            document.querySelectorAll('.quantity-input').forEach(input => {
-                input.addEventListener('change', (e) => {
-                    const id = parseInt(e.target.getAttribute('data-id'));
-                    const newQuantity = parseInt(e.target.value);
-                    if (newQuantity > 0) {
-                        setQuantity(id, newQuantity);
-                    } else {
-                        setQuantity(id, 1);
-                    }
-                });
-            });
-            
-            document.querySelectorAll('.remove-item').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    const id = parseInt(e.target.getAttribute('data-id'));
-                    removeFromCart(id);
-                });
-            });
-        }
-
-        // 更新商品数量
-        function updateQuantity(productId, change) {
-            const item = cart.find(item => item.id === productId);
-            if (item) {
-                item.quantity += change;
-                if (item.quantity < 1) {
-                    item.quantity = 1;
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
                 }
-                updateCart();
-            }
-        }
-
-        // 设置商品数量
-        function setQuantity(productId, quantity) {
-            const item = cart.find(item => item.id === productId);
-            if (item) {
-                item.quantity = quantity;
-                updateCart();
-            }
-        }
-
-        // 从购物车移除商品
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            updateCart();
-        }
-
-        // 切换购物车显示/隐藏
-        function toggleCart() {
-            cartSidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = cartSidebar.classList.contains('active') ? 'hidden' : '';
-        }
-
-        // 显示通知
-        function showNotification(message) {
-            // 创建通知元素
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background-color: #27ae60;
-                color: white;
-                padding: 15px 20px;
-                border-radius: 5px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                z-index: 1002;
-                transition: transform 0.3s, opacity 0.3s;
-                transform: translateX(100%);
-                opacity: 0;
-            `;
-            notification.textContent = message;
-            document.body.appendChild(notification);
-            
-            // 显示通知
-            setTimeout(() => {
-                notification.style.transform = 'translateX(0)';
-                notification.style.opacity = '1';
-            }, 100);
-            
-            // 隐藏通知
-            setTimeout(() => {
-                notification.style.transform = 'translateX(100%)';
-                notification.style.opacity = '0';
-                setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 300);
-            }, 3000);
-        }
+            });
+        });
     </script>
 </body>
 </html>
